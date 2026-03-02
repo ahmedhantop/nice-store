@@ -11,7 +11,7 @@ class OtpBottomSheet extends StatefulWidget {
 }
 
 class _OtpBottomSheetState extends State<OtpBottomSheet> {
-  int otp = 0;
+  int? otp;
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(

@@ -116,6 +116,10 @@ class _ProductDescriptionScreenState
           text: "Add to Cart",
           onPressed: () {
             ref.read(cartProvider.notifier).addToCart(widget.product, quantity);
+
+            ScaffoldMessenger.of(
+              context,
+            ).showSnackBar(const SnackBar(content: Text("Added to cart 🛒")));
           },
 
           backgroundColor: AppColors.secondary,
