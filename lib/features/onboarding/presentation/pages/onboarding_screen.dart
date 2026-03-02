@@ -41,7 +41,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   imagePath: AssetsManager.logo,
                   title: "get what you need",
                   description:
-                      'we sell any thing , just start a journey inside our store',
+                      'we sell any thing , just start your journey inside our store',
                   textColor: Colors.white,
                 ),
                 _buildPage(

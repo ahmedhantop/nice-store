@@ -109,7 +109,18 @@ class _OtpScreenState extends State<OtpScreen> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-                onPressed: () => _showOtpBottomSheet(context),
+                onPressed: () {
+                  if (_phoneController.text.isEmpty ||
+                      _phoneController.text.length != 9) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("الرجاء إدخال رقم جوال صالح."),
+                      ),
+                    );
+                    return;
+                  } else
+                    _showOtpBottomSheet(context);
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF0D4761), // Dark Navy Blue
                   shape: RoundedRectangleBorder(

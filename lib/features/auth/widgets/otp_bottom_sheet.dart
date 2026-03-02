@@ -118,9 +118,7 @@ class _OtpBottomSheetState extends State<OtpBottomSheet> {
               onPressed: () {
                 if (otp == 0000) {
                   debugPrint("رمز التحقق:$otp");
-                  // }
-                  // Verify logic placeholder
-                  // Navigator.pop(context); // Close sheet
+
                   Navigator.push(
                     context,
                     MaterialPageRoute(

@@ -6,7 +6,7 @@ class AssetsManager {
   static const String onboarding2 = '$_imagesPath/onboarding2.png';
   static const String onboarding3 = '$_imagesPath/onboarding3.png';
 
-  static const String logo = '$_imagesPath/logo_3.png';
+  static const String logo = '$_imagesPath/logo.png';
 
   // Background assets
   static const String backgroundPattern = '$_imagesPath/background-pattern.png';
