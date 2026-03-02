@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nicestore/core/widgets/custom_button.dart';
 import 'package:nicestore/features/home/navigator_screens/main_screen.dart';
 import 'package:pinput/pinput.dart';
 
@@ -114,7 +115,8 @@ class _OtpBottomSheetState extends State<OtpBottomSheet> {
           SizedBox(
             width: double.infinity,
             height: 50,
-            child: ElevatedButton(
+            child: CustomButton(
+              text: 'verify',
               onPressed: () {
                 if (otp == 0000) {
                   debugPrint("رمز التحقق:$otp");
@@ -133,21 +135,6 @@ class _OtpBottomSheetState extends State<OtpBottomSheet> {
                   );
                 }
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF00898A), // Teal
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-              child: const Text(
-                'verify',
-                style: TextStyle(
-                  fontFamily: 'Cairo',
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
             ),
           ),
           const SizedBox(height: 40),
