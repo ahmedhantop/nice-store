@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nicestore/core/localization/app_strings.dart';
 import 'package:nicestore/core/providers/auth_provider.dart';
 import 'package:nicestore/core/providers/auth_state.dart';
+import 'package:nicestore/core/theme/colors.dart';
 import 'package:nicestore/core/widgets/custom_animations.dart';
 import 'package:nicestore/core/widgets/custom_button.dart';
 import 'package:nicestore/core/widgets/custom_text_form_field.dart';
@@ -179,6 +180,7 @@ class _LoginFormState extends ConsumerState<LoginForm>
               SlideInAnimation(
                 delay: const Duration(milliseconds: 600),
                 child: CustomButton(
+                  backgroundColor: AppColors.secondary,
                   text: AppStrings.login.tr(),
                   onPressed: authState.isLoading ? null : _login,
                   size: ButtonSize.large,

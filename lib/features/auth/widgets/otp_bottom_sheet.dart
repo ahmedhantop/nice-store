@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nicestore/core/theme/colors.dart';
 import 'package:nicestore/core/widgets/custom_button.dart';
 import 'package:nicestore/features/home/navigator_screens/main_screen.dart';
 import 'package:pinput/pinput.dart';
@@ -116,6 +117,8 @@ class _OtpBottomSheetState extends State<OtpBottomSheet> {
             width: double.infinity,
             height: 50,
             child: CustomButton(
+              backgroundColor: AppColors.secondary,
+              size: ButtonSize.large,
               text: 'verify',
               onPressed: () {
                 if (otp == 0000) {
